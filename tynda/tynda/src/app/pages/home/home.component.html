@@ -1,0 +1,50 @@
+<div class="tynda_home-container row">
+    <div class="tynda_home-container_side_bar col-2">
+        <div class="tynda_home-container_side_bar-items">
+            <img width="150" class="m-3 text-left" src="assets/spotify_light.png" alt="spotify_logo">
+        </div>
+        <div class="tynda_home-container_side_bar-items" (click)="onNavigate('home')">
+            <a>Home</a>
+        </div>
+        <div class="tynda_home-container_side_bar-items" (click)="onNavigate('search')">
+            <a>Search</a>
+        </div>
+        <div class="tynda_home-container_side_bar-items" (click)="onNavigate('library')">
+            <a>Your Library</a>
+        </div>
+        <div class="tynda_home-container_side_bar-items" (click)="onNavigate('playlist')">
+            <a>Create Playlist</a>
+        </div>
+    </div>
+    <div class="tynda_home-container_playlist-container col-10">
+        <app-top-nav></app-top-nav>
+        <div [style.paddingTop]="'48px'" class="mt-5 container-fluid">
+            <h4 [style.color]="'white'" [style.padding]="'10px'">Focus</h4>
+            <div class="playlist_card_collections">
+                <div id="song_card_item" *ngFor="let sc of songCards">
+                    <app-song-card
+                        [image]="sc.image"
+                        [title]="sc.title"
+                        [description]="sc.description"
+                        [song_id]="sc.song_id"
+                        [song]="sc.song"
+                    ></app-song-card>
+                </div>
+            </div>
+        </div>
+        <div [style.paddingTop]="'250px'" class="mt-5 container-fluid">
+            <h4 [style.color]="'white'" [style.padding]="'10px'">Tynda Playlists</h4>
+            <div class="playlist_card_collections">
+                <div id="song_card_item" *ngFor="let sc of songCards">
+                    <app-song-card
+                        [image]="sc.image"
+                        [title]="sc.title"
+                        [description]="sc.description"
+                        [song_id]="sc.song_id"
+                        [song]="sc.song"
+                    ></app-song-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<!-- <div class="tynda_top-nav">
+    <div class="tynda_top-nav_focus_title">Focus</div>
+    <div class="tynda_top-nav_auth">
+        <div class="tynda_top-nav_auth_sign-up">Sign Up</div>
+        <div class="tynda_top-nav_auth_login">Log in</div>
+    </div>
+</div> -->
+<header>
+    <nav class="tynda_top-nav">
+        
+        <ul class="tynda_top-nav_search mt-3">
+            <li>
+                <input *ngIf="isSearchVisible" class="search_playlist" type="search" placeholder="What do you want to listen to?">
+            </li>
+        </ul>
+        <ul class="tynda_top-nav_auth mt-3">
+            <li class="tynda_top-nav_auth_signup" (click)="onNavigateToSignUp()">Sign up</li>
+            <li class="tynda_top-nav_auth_login" (click)="onNavigateToLogin()">Log in</li>
+        </ul>
+    </nav>
+</header>

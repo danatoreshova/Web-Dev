@@ -1,0 +1,43 @@
+<div class="player">
+    <div class="music-info">
+        <img src="images/Obito.jpeg" alt="SASUKE" id="track_image">
+        <div class="song">
+            <h4 id="title">Song name</h4>
+            <p id="artist">Someone</p>
+        </div>
+    </div>
+    
+    <div class="controller">
+        <div class="navigation">
+            <button id="shuffle" class="action-btn" onclick="">
+                <i class="fa-solid fa-shuffle"></i>
+            </button>
+
+            <button id="prev" class="action-btn" onclick="prev_song()">
+                <i class="fas fa-backward"></i>
+            </button>
+
+            <button id="play" class="action-btn action-btn-big" onclick="just_play()">
+                <i class="fas fa-play-circle"></i>
+            </button>
+
+            <button id="next" class="action-btn" onclick="next_song()">
+                <i class="fas fa-forward"></i>
+            </button>
+
+            <button id="repeat" class="action-btn" onclick="">
+                <i class="fa-solid fa-repeat"></i>
+            </button>
+        </div>
+
+        <div class="volume-container">
+            <i class="fa-solid fa-volume-high" id="volume-icon" onclick="mute_sound()"></i>  
+            <input type="range" min="0" max="100" value="100" onchange="volume_change()" id="volume">
+        </div>
+
+        <div class="duration">
+
+            <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+        </div>
+    </div>
+</div>

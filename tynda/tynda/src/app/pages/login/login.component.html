@@ -1,0 +1,26 @@
+<div class="container" style="width: 800px;">
+    <form [formGroup]="userForm" (ngSubmit)="submit()">
+        <div class="login_container">
+            <div class="container mt-5">
+                <h4 id="tynda"><b>Tynda</b></h4>
+                <hr>
+            </div>
+            <div>
+                <label><strong>Email address</strong></label><br>
+                <input [formControl]="emailFormControl" type="email" placeholder="Email address">
+            </div>
+            <div>
+                <label class="mt-2"><strong>Password</strong></label><br>
+                <input [formControl]="passwordFormControl" type="password" placeholder="Password"><br>
+                <label class="mt-3"><a [style.textDecoration]="'underline'"><b>Forgot your password ?</b></a></label>
+            </div>
+            <div id="login-btn">
+                <button>LOG IN</button>
+            </div>
+            <div class="container signup-btn">
+                <hr>
+                <a href="/signup" id="tynda" style="text-decoration: underline;"><strong>Don't have an account ?</strong></a>
+            </div>
+        </div>
+    </form>
+</div>
